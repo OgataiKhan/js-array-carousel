@@ -5,10 +5,11 @@ This project is an image carousel that uses javascript to cycle through differen
 1. In javascript we create an array containing the file names of the images and save it as a variable.
 2. We create an "items" variable that will contain the html div element that will contain all our images.
 3. We create a variable that represents the position of the currently active slide in the array.
-4. We use a for loop to add the images to the html using a template literal.
-5. We add the "active" class to the currently active slide.
-6. We create a variable that selects all of our slides in the html.
-7. We use addEventListener to cycle through the images when we click on the arrows, making sure we can't continue past the first and last image.
+4. We create variables that represent the "prev" and "next" arrows in our document
+5. We use a for loop to add the images to the html using a template literal.
+6. We add the "active" class to the first slide.
+7. We create a variable that selects all of our slides in the html.
+8. We use addEventListener to cycle through the images when we click on the arrows, making sure we can't continue past the first and last image.
 
 ## Bonus 1
 
