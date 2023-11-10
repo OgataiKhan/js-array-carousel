@@ -21,25 +21,30 @@ firstItem.classList.add('active');
 const domSlides = document.querySelectorAll('.item');
 
 // 8. We use addEventListener to cycle through the images when we click on the arrows, making sure we can't continue past the first and last image.
-
+// Bonus 1: add "else" conditions to make the carousel cyclical
 const prev = document.querySelector('.prev');
 const next = document.querySelector('.next');
 
 prev.addEventListener('click', function() {
-    console.log('Ho cliccato su prev');
     if (currentSlide > 0) {
         domSlides[currentSlide].classList.remove('active');
         currentSlide--;
-        domSlides[currentSlide].classList.add('active');   
+        domSlides[currentSlide].classList.add('active');
+    } else {
+        domSlides[currentSlide].classList.remove('active');
+        currentSlide = domSlides.length - 1;
+        domSlides[currentSlide].classList.add('active');
     }
 })
 
-
 next.addEventListener('click', function() {
-    console.log('Ho cliccato su next');
     if (currentSlide < domSlides.length - 1) {
         domSlides[currentSlide].classList.remove('active');
         currentSlide++;
-        domSlides[currentSlide].classList.add('active');   
-    }    
+        domSlides[currentSlide].classList.add('active');
+    } else {
+        domSlides[currentSlide].classList.remove('active');
+        currentSlide = 0;
+        domSlides[currentSlide].classList.add('active');
+    }
 })
