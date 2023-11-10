@@ -4,8 +4,12 @@
     box-sizing: border-box;
 }
 
+body img {
+    display: block;
+}
+
 .container {
-    width: 900px;
+    width: 850px;
     height: 100vh;
     margin: 0 auto;
     display: flex;
@@ -16,6 +20,7 @@
     position: relative;
     width: 700px;
     height: 300px;
+    flex-shrink: 0;
 }
 
 .item {
@@ -24,7 +29,8 @@
     position: relative;
 }
 
-.item img {
+.item img,
+.thumbnail img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -81,4 +87,24 @@
     bottom: 35%;
     left: 50%;
     transform: translate(-50%) rotate(135deg);
+}
+
+/*
+My css
+*/
+
+.thumbnails {
+    background-color: #000;
+    width: 150px;
+    height: 300px;
+}
+
+.thumbnails .thumbnail {
+    height: calc(100% / 5);
+    opacity: 0.6;
+}
+
+.thumbnails .thumbnail.highlighted {
+    opacity: 1;
+    border: 2px solid #d3d3d3
 }
