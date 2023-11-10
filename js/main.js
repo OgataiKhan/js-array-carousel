@@ -13,7 +13,7 @@ const thumbnails = document.querySelector('.thumbnails');
 // Bonus 2: We also add the thumbnails.
 for (let i = 0; i < images.length; i++) {
     items.innerHTML += `<div class="item"><img src="img/${images[i]}" alt="Image ${i+1}"></div>`;
-    thumbnails.innerHTML += `<div class="thumbnail thumbnail-${i+1}"><img src="img/${images[i]}" alt="Image ${i+1} thumbnail"></div>`
+    thumbnails.innerHTML += `<div class="thumbnail"><img src="img/${images[i]}" alt="Image ${i+1} thumbnail"></div>`
 }
 
 // 6. We add the "active" class to the first slide.
