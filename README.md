@@ -15,16 +15,21 @@ This project is an image carousel that uses javascript to cycle through differen
 
 The carousel becomes cyclical. When the user clicks "down" from the last image it will bring them to the first image and vice-versa.
 
+1. Add "else" conditions to our existing event listeners to make the carousel cyclical.
+
 ## Bonus 2
 
 Add thumbnails for all the images on the right, highlighting the thumbnail of the active image.
 
 1. We create a "thumbnails" variable that will contain html div element that will contain all our thumbnails.
-2. We add the thumbnails with the existing for loop
-3. We add the "highlighted" class to the first thumbnail
+2. We add the thumbnails with the existing for loop.
+3. We add the "highlighted" class to the first thumbnail.
 4. We create a variable that selects all of our thumbnails in the html.
-5. We manage the "highlighted" class of our active thumbnail the same way we did with the "active" class of our active image
+5. We manage the "highlighted" class of our active thumbnail the same way we did with the "active" class of our active image.
 
 ## Bonus 3
 
 Clicking on a image's thumbnail makes it the active image.
+
+1. Use a for loop to attach an event listener to each thumbnail.
+2. On click on a thumbnail, remove the "active" and "highlighted" classes from the active image and thumbnail and add them to the clicked image instead.
