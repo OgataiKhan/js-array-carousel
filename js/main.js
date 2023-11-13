@@ -36,35 +36,27 @@ const prev = document.querySelector('.prev');
 const next = document.querySelector('.next');
 
 prev.addEventListener('click', function() {
+    domSlides[currentSlide].classList.remove('active');
+    domThumbnails[currentSlide].classList.remove('highlighted');
     if (currentSlide > 0) {
-        domSlides[currentSlide].classList.remove('active');
-        domThumbnails[currentSlide].classList.remove('highlighted');
         currentSlide--;
-        domSlides[currentSlide].classList.add('active');
-        domThumbnails[currentSlide].classList.add('highlighted');
     } else {
-        domSlides[currentSlide].classList.remove('active');
-        domThumbnails[currentSlide].classList.remove('highlighted');
         currentSlide = domSlides.length - 1;
-        domSlides[currentSlide].classList.add('active');
-        domThumbnails[currentSlide].classList.add('highlighted');
     }
+    domSlides[currentSlide].classList.add('active');
+    domThumbnails[currentSlide].classList.add('highlighted');
 })
 
 next.addEventListener('click', function() {
+    domSlides[currentSlide].classList.remove('active');
+    domThumbnails[currentSlide].classList.remove('highlighted');
     if (currentSlide < domSlides.length - 1) {
-        domSlides[currentSlide].classList.remove('active');
-        domThumbnails[currentSlide].classList.remove('highlighted');
         currentSlide++;
-        domSlides[currentSlide].classList.add('active');
-        domThumbnails[currentSlide].classList.add('highlighted');
     } else {
-        domSlides[currentSlide].classList.remove('active');
-        domThumbnails[currentSlide].classList.remove('highlighted');
         currentSlide = 0;
-        domSlides[currentSlide].classList.add('active');
-        domThumbnails[currentSlide].classList.add('highlighted');
     }
+    domSlides[currentSlide].classList.add('active');
+    domThumbnails[currentSlide].classList.add('highlighted');
 })
 
 // Bonus 3: Use a for loop to attach an event listener to each thumbnail.
